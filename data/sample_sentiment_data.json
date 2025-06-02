@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "text": "Absolutely loved the experience!",
+        "category": "customer_service",
+        "source": "review"
+    },
+    {
+        "id": 2,
+        "text": "It was okay, not great.",
+        "category": "product_quality",
+        "source": "feedback"
+    },
+    {
+        "id": 3,
+        "text": "Worst service I've ever received.",
+        "category": "customer_service",
+        "source": "complaint"
+    },
+    {
+        "id": 4,
+        "text": "Brilliant support team and quick response.",
+        "category": "customer_service",
+        "source": "review"
+    },
+    {
+        "id": 5,
+        "text": "I'm very disappointed with the quality.",
+        "category": "product_quality",
+        "source": "feedback"
+    },
+    {
+        "id": 6,
+        "text": "Exceeded my expectations!",
+        "category": "overall_experience",
+        "source": "review"
+    },
+    {
+        "id": 7,
+        "text": "The delivery was incredibly fast and efficient.",
+        "category": "delivery",
+        "source": "review"
+    },
+    {
+        "id": 8,
+        "text": "Product arrived damaged and packaging was poor.",
+        "category": "delivery",
+        "source": "complaint"
+    },
+    {
+        "id": 9,
+        "text": "Great value for money, highly recommend!",
+        "category": "value",
+        "source": "review"
+    },
+    {
+        "id": 10,
+        "text": "The interface is confusing and hard to navigate.",
+        "category": "usability",
+        "source": "feedback"
+    },
+    {
+        "id": 11,
+        "text": "Outstanding customer support, resolved my issue quickly.",
+        "category": "customer_service",
+        "source": "review"
+    },
+    {
+        "id": 12,
+        "text": "Not worth the price, expected much better quality.",
+        "category": "value",
+        "source": "feedback"
+    }
+]

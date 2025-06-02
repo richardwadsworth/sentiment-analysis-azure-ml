@@ -1,0 +1,44 @@
+# Azure ML Pipeline Job Definition for Sentiment Analysis
+$schema: https://azuremlschemas.azureedge.net/latest/pipelineJob.schema.json
+type: pipeline
+
+# Pipeline metadata
+display_name: "{PIPELINE_DISPLAY_NAME}"
+description: "{PIPELINE_DESCRIPTION}"
+experiment_name: "{PIPELINE_EXPERIMENT_NAME}"
+
+# Pipeline settings
+settings:
+  default_compute: azureml:{AZURE_COMPUTE_NAME}
+  default_datastore: azureml:{ML_DEFAULT_DATASTORE}
+
+# Pipeline jobs
+jobs:
+  sentiment_analysis_job:
+    type: command
+    display_name: "Sentiment Analysis Processing"
+    
+    # Compute and environment
+    compute: azureml:{AZURE_COMPUTE_NAME}
+    environment: azureml:{ML_ENVIRONMENT_NAME}:{ML_ENVIRONMENT_VERSION}
+    
+    # Code location
+    code: ../src
+    
+    # Command to execute
+    command: >-
+      python sentiment_table.py
+      --input-data {INPUT_DATA_FILE}
+      --table-name {OUTPUT_TABLE_NAME}
+      --storage-account {AZURE_STORAGE_ACCOUNT_NAME}
+      --container-name {STORAGE_CONTAINER_NAME}
+      --model-name {ML_MODEL_NAME}
+      --batch-size {ML_BATCH_SIZE}
+      --text-field {ML_TEXT_FIELD}
+    
+    # Environment variables
+    environment_variables:
+      PYTHONPATH: "{PYTHONPATH}"
+      TRANSFORMERS_CACHE: "{TRANSFORMERS_CACHE}"
+      HF_HOME: "{HF_HOME}"
+      HF_DATASETS_CACHE: "{HF_DATASETS_CACHE}"

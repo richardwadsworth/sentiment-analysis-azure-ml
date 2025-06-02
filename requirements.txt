@@ -1,0 +1,10 @@
+# Core Azure packages
+azure-ai-ml>=1.11.1
+azure-storage-blob>=12.19.0
+azure-identity>=1.15.0
+azure-core>=1.29.0
+
+# Environment and configuration
+python-dotenv>=1.0.0
+
+
